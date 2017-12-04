@@ -1,0 +1,14 @@
+<div>
+  <div class="equal-dim ui-g-6">
+    <p-chart type="pie" [data]="lossPercentData" [options]="optionsLossPercentage"></p-chart>
+  </div>
+  <div class="equal-dim ui-g-6">
+    <p-chart type="line" [data]="streakRatingData" [options]="optionsLossStreak"></p-chart>
+  </div>
+  <div class="equal-dim ui-g-6">
+    <p-chart type="line" [data]="timeSinceLossData" [options]="timeSinceLossOptions"></p-chart>
+  </div>
+  <div class="equal-dim ui-g-6">
+    <p-chart type="bar" [data]="goldDifferentialData" [options]="goldDifferentialOptions"></p-chart>
+  </div>
+</div>

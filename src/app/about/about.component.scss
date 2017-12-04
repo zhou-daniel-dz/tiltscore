@@ -1,0 +1,206 @@
+div {
+    font-family: "Lato";
+    font-style: normal;
+}
+
+.bg {
+    background-image: url('../../assets/images/background.jpg');
+    height: 100%;
+    overflow: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p {
+    text-align: justify;
+    text-indent: 20px;
+    padding: 15px;
+    font-size: 1.0em;
+    line-height: 150%;
+}
+
+h2 {
+    font-family: "Lato";
+    margin-top: 20;
+    font-size: 4em;
+    font-weight: 200;
+    font-style: normal;
+    text-align: center;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s; /* Firefox < 16 */
+     -ms-animation: fadein 1s; /* Internet Explorer */
+      -o-animation: fadein 1s; /* Opera < 12.1 */
+         animation: fadein 1s;
+}
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fade-out {
+    -webkit-animation: fadeout 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadeout 1s; /* Firefox < 16 */
+     -ms-animation: fadeout 1s; /* Internet Explorer */
+      -o-animation: fadeout 1s; /* Opera < 12.1 */
+         animation: fadeout 1s;
+}
+
+.title {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
+    overflow: auto;
+}
+
+.criteria{
+    border-top: 2px solid rgba(223, 220, 227, 0.5);
+    margin: 0;
+    padding: 0;
+    background-color: rgba(252, 74, 26, 0.5);
+    display: block;
+    overflow: auto;
+}
+
+.criteria-panel {
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-bottom: 3em;
+}
+
+.criteria .section-title {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.criteria:hover .section-title {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.details{
+    border-top: 2px solid rgba(223, 220, 227, 0.5);
+    margin: 0;
+    padding: 0;
+    background-color: rgba(247, 183, 51, 0.5);
+    display: block;
+    overflow: auto;
+}
+
+.details .section-title {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.details:hover .section-title {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.details-panel {
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-bottom: 3em;
+}
+
+.details-title {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.details-content {
+    padding-top: 10px;
+    line-height: 1.5;
+    text-align: justify;
+    font-size: 0.8em;
+}
+
+.section-title {
+    padding-top: 20px;
+    font-size: 1.6em;
+    text-align: center;
+}
+
+.personal{
+    border-top: 2px solid rgba(223, 220, 227, 0.5);
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
+    overflow: auto;
+}
+
+.personal .section-title {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.personal:hover .section-title {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.details-content {
+    padding-top: 10px;
+    line-height: 1.5;
+    text-align: justify;
+    font-size: 1em;
+}
+
+@media only screen and (max-width:1210px) {
+.details-content {
+    padding-top: 10px;
+    line-height: 1.5;
+    text-align: justify;
+    font-size: 0.8em;
+}
+.details-panel {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-bottom: 1.5em;
+}
+.criteria-panel {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-bottom: 1.5em;
+}
+
+.details-title {
+    text-align: center;
+    font-size: 1em;
+}
+    // smaller devices
+}
+
+@media only screen and (max-width:441) {
+.details-content {
+    padding-top: 10px;
+    line-height: 1.5;
+    text-align: justify;
+    font-size: 0.6em;
+}
+.details-panel {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+}
+.criteria-panel {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+}
+
+.details-title {
+    text-align: center;
+    font-size: 0.8em;
+}
+    // smaller devices
+}

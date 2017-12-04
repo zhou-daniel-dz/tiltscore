@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+body, html {
+    font-family: 'Lato';
+    font-style: 'normal';
+    color: white;
+    height: 100%;
+    margin: 0;
+}
+
+.nav {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+}

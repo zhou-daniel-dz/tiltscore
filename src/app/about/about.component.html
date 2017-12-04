@@ -1,0 +1,96 @@
+<div class="bg">
+  <div class="fade-in ui-g-12 title">
+    <h2>About</h2>
+  </div>
+  <div class="fade-in details ui-g-12">
+    <div class="ui-g-12 section-title">General</div>
+    <div class="details-panel ui-g-6">
+      <div class="details-title">
+        Motivation
+      </div>
+      <div class="details-content">
+        &nbsp; &nbsp; &nbsp; &nbsp;Tiltscore was an idea I had while trying to reach my ladder goals near the end of season 7. I
+        had only a couple days left and was about 200-300 lp away from where I wanted to be. After going on a 7 game win
+        streak directly followed by a 7 game loss streak which solidified the impossibility of reaching my desired elo, I
+        thought about what I could do to help myself and others like me from huge loss streaks. Way too often tilted players
+        go into autopilot and continue to play resulting in huge loss streaks. Everyone knows the feeling of thinking that
+        you can turn it around with a win streak. Instead this just baits people into huge drops in ranking because they
+        didn't take a breather.
+      </div>
+    </div>
+    <div class="details-panel ui-g-6">
+      <div class="details-title">
+        Idea
+      </div>
+      <div class="details-content">
+        &nbsp; &nbsp; &nbsp; &nbsp;Tiltscore pulls data and statistics from your recent matches and does analytics on four distinct
+        factors that likely affect your level of tilt. After assessing and combining these multiple factors, which are each
+        weighted differently, Tiltscore will give a final score between 0 and 100 that describes how tilted we think you
+        are as well as a minor description to contextualize what that number means. Clearly you can take the score and advice
+        we generate however you like. We also provide a couple more detailed charts to help you understand the breakdown.
+      </div>
+    </div>
+  </div>
+  <div class="fade-in criteria ui-g-12">
+    <div class="ui-g-12 section-title">Tiltscore Criteria</div>
+    <div class="criteria-panel ui-g-3">
+      <div class="details-title">
+        Loss Percentage
+      </div>
+      <div class="details-content">
+        &nbsp; &nbsp; &nbsp; &nbsp;Simply takes in the raw percent of games won and lost in your last 10 games and puts it into your
+        score.
+      </div>
+    </div>
+    <div class="criteria-panel ui-g-3">
+      <div class="details-title">
+        Loss Streak
+      </div>
+      <div class="details-content">
+        &nbsp; &nbsp; &nbsp; &nbsp;Determines if you are on a loss streak and the length of that loss streak. The amount it affects
+        your rating increases exponentially but caps at 4 losses (subsequent losses won't affect your score any more).
+      </div>
+    </div>
+    <div class="criteria-panel ui-g-3">
+      <div class="details-title">
+        Time Since Loss
+      </div>
+      <div class="details-content">
+        &nbsp; &nbsp; &nbsp; &nbsp;Finds the last loss you had in recent history and affects your score based on the amount of time
+        that has passed since. If the last loss was greater than 6 hours, tiltscore is unaffected.
+      </div>
+    </div>
+    <div class="criteria-panel ui-g-3">
+      <div class="details-title">
+        Counterpart Gold Differential
+      </div>
+      <div class="details-content">
+        &nbsp; &nbsp; &nbsp; &nbsp;Counts the gold differential between you and your opposing laner in the last 10 matches. If your
+        opponent's total gold is above yours by a certain amount, your tiltscore is affected.
+      </div>
+    </div>
+  </div>
+  <div class="fade-in personal ui-g-12">
+    <div class="ui-g-12 section-title">Personal</div>
+    <div class="ui-g-12" style="text-align: center">
+      <a href="https://www.twitch.tv/plateezy/" target="_blank">
+        <img width="50px" height="50px" src="http://www.twinchallenge.com/wp-content/uploads/2017/05/twitch1600.png">
+      </a>
+      <a href="https://twitter.com/Plateezy?lang=en" target="_blank">
+        <img width="50px" height="50px" src="http://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c53e.png">
+      </a>
+      <a href="https://www.youtube.com/channel/UC2qMNL9K-fMRYpNtsBDxZTw" target="_blank">
+        <img width="50px" height="50px" src="http://moziru.com/images/logo-clipart-youtube-5.png">
+      </a>
+    </div>
+    <div class="ui-g-12" style="text-align: center;">
+      <span style="cursor: pointer">
+        <i class="fa fa-arrow-left" style="vertical-align: middle">
+        </i>
+        <span (click)="returnToHome()" style="padding-left: 10px; font-family: lato; font-size: 25px; vertical-align: middle">
+          Back
+        </span>
+      </span>
+    </div>
+  </div>
+</div>

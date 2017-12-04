@@ -1,0 +1,48 @@
+<div class="bg">
+  <div [ngClass]="determineFadeRotate()" style="height:30%">
+    <h1 class="tiltText">
+      <span style="cursor: pointer" (click)="about()">Tiltscore</span>
+    </h1>
+  </div>
+  <div [ngClass]="determineFade()" style="padding-top: 1em; height: 18%; margin: 0 auto; width: 100%;">
+    <div class="responsive-input">
+      <div class="ui-inputgroup">
+        <span class="ui-inputgroup-addon">
+          <div style="padding-top: 10px">
+            <i class="fa fa-user"></i>
+          </div>
+        </span>
+        <input pInputText type="text" placeholder="Summoner name" [(ngModel)]="name" (keyup.enter)="calculate()">
+      </div>
+    </div>
+    <div class="responsive-select">
+      <p-selectButton [options]="regions" [(ngModel)]="selectedRegion"></p-selectButton>
+    </div>
+    <div style="padding-top: 2.4em; font-size:1em; text-align: center">
+      <button class="ui-button-warning" (click)="calculate()" style="font-size: 1.2em; padding-left: 10px; padding-right: 10px"
+        pButton type="button" label="Calculate"></button>
+    </div>
+  </div>
+  <div class="determineFade()" *ngIf="!awaitingCalculate" style="font-size:2em; height: 50%; text-align: center; display: in-line;">
+    <div class="loader" *ngIf="!loadDone && !loadFailed"></div>
+    <div class="hashinshin fade-in" *ngIf="loadFailed">
+      Player data could not be found, please try again.
+    </div>
+    <div *ngIf="loadDone" class="fade-in">
+      <span style="font-size: 1.2em">Your tiltscore is
+        <span [ngClass]="messageStyle()">{{tiltData.tiltscore}}</span>
+      </span>
+      <div [ngClass]="messageStyle()" style="font-size: 0.65em;">
+        {{tiltscoreMessage()}}
+      </div>
+      <div class="radarChart">
+        <p-chart type="radar" [data]="data" [options]="chartOptions"></p-chart>
+      </div>
+      <button pButton type="button" (click)="toggleGraphs()" class="ui-button-info" style="font-size: 0.4em" label="More info"></button>
+    </div>
+  </div>
+</div>
+  <p-sidebar [style]="{'background-color': 'rgba(0, 0, 0, 0.8)','overflow': 'scroll'}" [(visible)]="displayGraphs"
+    [fullScreen]="true">
+    <app-graphs></app-graphs>
+  </p-sidebar>

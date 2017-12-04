@@ -1,0 +1,12 @@
+.equal-dim {
+  height: 45%;
+  width: 50%;
+}
+
+@media only screen and (max-width:650px) {
+
+.equal-dim {
+  height: 25%;
+  width: 100%;
+}
+}
